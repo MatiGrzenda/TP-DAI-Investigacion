@@ -2,11 +2,13 @@ import { useEvent } from 'expo';
 import { useVideoPlayer, VideoView } from 'expo-video';
 import { StyleSheet, View, Button } from 'react-native';
 
-const videoSource =
+const videoSource1 = require('./assets/video.mp4');
+
+const videoSource2 =
   'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4';
 
 export default function VideoScreen() {
-  const player = useVideoPlayer(videoSource, player => {
+  const player = useVideoPlayer(videoSource2, player => {
     player.loop = true;
     player.play();
   });
